@@ -44,4 +44,8 @@ public class JuegoNim extends Juego {
     protected boolean verificarFinJuego() {
         return piezasRestantes == 0;
     }
+    @Override
+    protected PuntuacionComparable calcularPuntuacionFinal() {
+        return new PuntuacionNim(ganador.getMovimientos());
+    }
 }

@@ -24,6 +24,8 @@ public abstract class Juego implements Jugable {
     protected abstract void iniciarTablero();
     protected abstract void jugarTurno(Scanner sc, Jugador jugadorActual);
     protected abstract boolean verificarFinJuego();
+    // Este método obliga a cada juego a devolver su objeto de puntuación específico
+    protected abstract PuntuacionComparable calcularPuntuacionFinal();
 
     @Override
     public Estadistica start(Scanner sc, Jugador jugador1, Jugador jugador2) {
@@ -63,7 +65,8 @@ public abstract class Juego implements Jugable {
             System.out.println("\nEl juego ha terminado en empate.");
         }
 
-        return new Estadistica(nombreJuego, j1, j2, ganador, duracionSegundos, movimientosTotales);
+        PuntuacionComparable puntaje = (ganador != null) ? calcularPuntuacionFinal() : null;
+        return new Estadistica(nombreJuego, ganador, puntaje);
     }
 
     protected void declararEmpate() {

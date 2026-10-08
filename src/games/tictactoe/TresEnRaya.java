@@ -63,6 +63,11 @@ public class TresEnRaya extends Juego {
         return false;
     }
 
+    @Override
+    protected PuntuacionComparable calcularPuntuacionFinal() {
+        return new PuntuacionTresEnRaya(ganador.getMovimientos());
+    }
+
     private void imprimirTablero() {
         System.out.println();
         for (int i = 0; i < 3; i++) {
@@ -73,4 +78,5 @@ public class TresEnRaya extends Juego {
         }
         System.out.println();
     }
+
 }

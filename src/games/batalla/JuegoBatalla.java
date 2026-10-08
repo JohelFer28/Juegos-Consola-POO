@@ -150,4 +150,10 @@ public class JuegoBatalla extends Juego {
             return -1;
         }
     }
+    @Override
+    protected PuntuacionComparable calcularPuntuacionFinal() {
+        // Asumiendo que sabes cuántos tiros falló el ganador
+        int fallos = (ganador == j1) ? tirosAlAguaJ1 : tirosAlAguaJ2;
+        return new PuntuacionBatalla(4, fallos);
+    }
 }
