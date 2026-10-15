@@ -11,7 +11,7 @@ public class Main {
         Consola consola = new Consola();
 
         System.out.println("=================================");
-        System.out.println("🎮 ENCENDIENDO CONSOLA DE JUEGOS 🎮");
+        System.out.println("  ENCENDIENDO CONSOLA DE JUEGOS     ");
         System.out.println("=================================");
 
         // Instalación de juegos (se agrega la Batalla Naval)

@@ -16,9 +16,9 @@ public class Estadistica {
 
     public void mostrar() {
         if (ganador != null && puntuacion != null) {
-            System.out.println("🏆 " + ganador.getNombre() + " | Juego: " + nombreJuego + " | Puntos: " + puntuacion.getDesglose());
+            System.out.println(" " + ganador.getNombre() + " | Juego: " + nombreJuego + " | Puntos: " + puntuacion.getDesglose());
         } else {
-            System.out.println("🤝 Empate en " + nombreJuego + " (Sin puntos)");
+            System.out.println(" Empate en " + nombreJuego + " (Sin puntos)");
         }
     }
 }
