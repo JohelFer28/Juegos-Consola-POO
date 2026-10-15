@@ -5,10 +5,22 @@ Documentacion Consola de Juegos
 
 1. COMO COMPILAR Y CORRER EL PROGRAMA
 
-Ojo: Apenas arranca, el programa ya carga unas estadisticas
-falsas para que la opcion de ver el Top 3 de
-estadisticas funcione de una vez y no haya que jugar
-partidas para probar si ordena bien.
+Se necesita tener instalado el JDK de Java.
+
+En IntelliJ IDEA, abre src/Main.java y ejecuta el metodo main
+con el boton verde que aparece junto a el.
+
+Para compilar y ejecutar desde PowerShell, abre una terminal
+en la carpeta principal del proyecto y ejecuta:
+
+javac -d out (Get-ChildItem -Path src -Recurse -Filter *.java | ForEach-Object { $_.FullName })
+java -cp out Main
+
+El programa funciona por consola. Escribe las opciones que
+aparecen en pantalla para interactuar con los juegos.
+
+Al iniciar, el programa carga estadisticas de ejemplo para
+que la opcion de ver el Top 3 funcione sin jugar partidas.
 
 2. EXPLICACION DE LOS PILARES DE POO
 ------------------------------------------------------------
