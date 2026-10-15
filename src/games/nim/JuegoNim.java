@@ -2,6 +2,8 @@ package games.nim;
 
 import games.Juego;
 import games.Jugador;
+import games.PuntuacionComparable;
+
 import java.util.Scanner;
 
 public class JuegoNim extends Juego {

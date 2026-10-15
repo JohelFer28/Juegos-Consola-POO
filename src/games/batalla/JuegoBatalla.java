@@ -2,6 +2,8 @@ package games.batalla;
 
 import games.Juego;
 import games.Jugador;
+import games.PuntuacionComparable;
+
 import java.util.Scanner;
 
 public class JuegoBatalla extends Juego {
@@ -152,8 +154,13 @@ public class JuegoBatalla extends Juego {
     }
     @Override
     protected PuntuacionComparable calcularPuntuacionFinal() {
-        // Asumiendo que sabes cuántos tiros falló el ganador
-        int fallos = (ganador == j1) ? tirosAlAguaJ1 : tirosAlAguaJ2;
-        return new PuntuacionBatalla(4, fallos);
+        // Obtenemos el índice del ganador (0 para j1, 1 para j2)
+        int idGanador = (ganador == j1) ? 0 : 1;
+
+        // Los fallos son los tiros totales del ganador menos los barcos que acertó
+        int aciertos = puntajes[idGanador];
+        int fallos = Math.max(0, ganador.getMovimientos() - aciertos);
+
+        return new PuntuacionBatalla(aciertos, fallos);
     }
 }

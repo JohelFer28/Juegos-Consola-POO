@@ -35,7 +35,7 @@ public class Main {
                     menuLanzarJuego(consola, sc);
                     break;
                 case "2":
-                    consola.mostrarEstadisticas();
+                    consola.mostrarEstadisticasTop3();
                     break;
                 case "3":
                     salir = true;

@@ -37,7 +37,7 @@ public class Consola {
 
     public void mostrarEstadisticasTop3() {
         System.out.println("\n=================================");
-        System.out.println("🔥 TOP 3 MEJORES PUNTUACIONES 🔥");
+        System.out.println(" TOP 3 ");
         System.out.println("=================================");
 
         // 1. Filtrar solo partidas ganadas (que tienen puntuación)

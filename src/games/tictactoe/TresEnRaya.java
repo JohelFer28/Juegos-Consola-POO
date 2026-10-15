@@ -2,6 +2,8 @@ package games.tictactoe;
 
 import games.Juego;
 import games.Jugador;
+import games.PuntuacionComparable;
+
 import java.util.Scanner;
 
 public class TresEnRaya extends Juego {
